@@ -1,4 +1,4 @@
-#1- create directory
-#2- create 2 file 
-#3- remove anyone 
-#4- edit on the file
+# create directory
+# create 2 file 
+# remove anyone 
+# edit on the file
