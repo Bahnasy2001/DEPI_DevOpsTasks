@@ -1,0 +1,16 @@
+server {
+    listen 82;
+    server_name mycv.local;
+
+    root /usr/share/nginx/mycv/;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location /styles.css {
+        alias /var/www/mycv/styles.css;
+    }
+}
+
