@@ -1,6 +1,7 @@
 # **Task 02: User and Group Management, Script Permissions, and Archiving**
 
-![Static Badge](https://img.shields.io/badge/build-Ubuntu-brightgreen?style=flat&logo=ubuntu&label=Linux&labelColor=Orange&color=red) ![Static Badge](https://img.shields.io/badge/Linux-Task01-Orange?style=flat&label=DevOps&labelColor=blue&color=gray)
+![Static Badge](https://img.shields.io/badge/build-Ubuntu-brightgreen?style=flat&logo=ubuntu&label=Linux&labelColor=Orange&color=red) ![Static Badge](https://img.shields.io/badge/Linux-Task02-Orange?style=flat&label=DevOps&labelColor=blue&color=gray)
+
 
 ## **Objective**
 
