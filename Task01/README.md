@@ -9,33 +9,34 @@ The goal of this task is to familiarize yourself with basic file operations in a
 
 ## **Steps**
 
-### 1. create directory
+### 1. Create directory
 
 - Use the `mkdir` command to create a new directory.
-> ``` bash 
-> mkdir Task01_Directory
+
+> ```bash 
+> `mkdir Task01_Directory`
 > ```
 
-### 2. create Two files
+### 2. Create Two files
 
 - Use the `cd` command to move to the new directory.
 
-> ``` bash 
-> cd Task01_Directory
+> ```bash 
+> `cd Task01_Directory`
 > ```
 
 - Inside the newly created directory, create two files using the `touch` command.
 
-> ``` bash 
-> touch file_One.txt
-> touch file_Two.txt
+> ```bash 
+> `touch file_One.txt`
+> `touch file_Two.txt`
 > ```
 
 ### 3. Remove One File
 - Use the `rm` command to delete one of the files.
 
 >```bash
-> rm file_Two.txt
+> `rm file_Two.txt`
 >```
 
 - To list the files: Use `ls` command.
@@ -43,6 +44,6 @@ The goal of this task is to familiarize yourself with basic file operations in a
 ### 4. Edit the Remaining File
 - Use a text editor like `nano` or `vim`  to modify the remaining file.
 
-> ``` bash 
-> nano file_One.txt
+> ```bash 
+> `nano file_One.txt`
 > ```
