@@ -1,5 +1,8 @@
 # **Task 01: Basic File Operations**
 
+![Static Badge](https://img.shields.io/badge/build-Ubuntu-brightgreen?style=flat&logo=ubuntu&label=Linux&labelColor=Orange&color=red) ![Static Badge](https://img.shields.io/badge/Linux-Task01-Orange?style=flat&label=DevOps&labelColor=blue&color=gray)
+
+
 ## **Objective**
 
 The goal of this task is to familiarize yourself with basic file operations in a Unix/Linux environment.
