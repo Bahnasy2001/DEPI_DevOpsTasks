@@ -1,6 +1,6 @@
 # Task 10: Two Complete Applications Using Load Balancer and Docker Compose
 
-![Static Badge](https://img.shields.io/badge/build-Ubuntu-brightgreen?style=flat&logo=ubuntu&label=Linux&labelColor=Orange&color=red) ![Static Badge](https://img.shields.io/badge/Docker-27.0.3-skyblue?style=flat&logo=docker&label=Docker) ![Static Badge](https://img.shields.io/badge/nginx-1.18.0-grey?style=flat&logo=nginx&label=nginx&labelColor=darkgreen&color=grey) ![Static Badge](https://img.shields.io/badge/Linux-Task04-Orange?style=flat&label=DevOps&labelColor=blue&color=gray)
+![Static Badge](https://img.shields.io/badge/build-Ubuntu-brightgreen?style=flat&logo=ubuntu&label=Linux&labelColor=Orange&color=red) ![Static Badge](https://img.shields.io/badge/Docker-27.0.3-skyblue?style=flat&logo=docker&label=Docker) ![Static Badge](https://img.shields.io/badge/nginx-1.18.0-grey?style=flat&logo=nginx&label=nginx&labelColor=darkgreen&color=grey) ![Static Badge](https://img.shields.io/badge/Linux-Task10-Orange?style=flat&label=DevOps&labelColor=blue&color=gray)
 
 
 This task demonstrates how to Dockerize two complete applications—**Spring Petclinic** and **mongo-express**—and manage them using Docker Compose. Additionally, we use **Nginx** as a load balancer to distribute traffic across multiple replicas of these applications.
