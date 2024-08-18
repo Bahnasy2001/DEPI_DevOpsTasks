@@ -39,9 +39,9 @@ docker run -e MYSQL_URL=jdbc:mysql://mysql-manual:3306/petclinic -e SPRING_PROFI
 
 ### Testing the Setup
 
-Use Command `docker network inspect spring-net` to know ipv4Address (172.17.0.3)
+Use Command `docker network inspect spring-net` to know ipv4Address (172.19.0.3)
 ![ipv4Address](spring-petclinic-manual/Task8_Part7.png)
-Access the application via `http://172.17.0.3:8080` and interact with the MySQL database.
+Access the application via `http://172.19.0.3:8080` and interact with the MySQL database.
 
 ## Part 2: Docker Compose
 
