@@ -109,12 +109,12 @@ body {
 
 ```bash
 docker build -t mycv-nginx .
-docker run -d -p 90:82 --name mycv-container -v /path/to/your/app:/usr/share/nginx/mycv mycv-nginx
+docker run -d -p 90:82 --name mycv-container -v /home/bahnasy/Desktop/DEPI/DEPI DevOpsTasks/Task7/mycv:/usr/share/nginx/mycv mycv-nginx
 ```
 
 **Explanation:**
 - **docker build -t mycv-nginx .**: Builds the Docker image and tags it as `mycv-nginx`.
-- **docker run -d -p 90:82 --name mycv-container -v /path/to/your/app:/usr/share/nginx/mycv mycv-nginx**: Runs the container with a bind mount, mapping the host directory to the container directory.
+- **docker run -d -p 90:82 --name mycv-container -v /home/bahnasy/Desktop/DEPI/DEPI DevOpsTasks/Task7/mycv:/usr/share/nginx/mycv mycv-nginx**: Runs the container with a bind mount, mapping the host directory to the container directory.
 
 ### 5. Access the Application
 
