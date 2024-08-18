@@ -125,6 +125,7 @@ Add the following entry to your `/etc/hosts` file:
 ```
 
 Access the application in your browser at `http://mycv.local:90`.
+
 **Before Change**
 ![Before Change](Task7_Part3.png)
 
