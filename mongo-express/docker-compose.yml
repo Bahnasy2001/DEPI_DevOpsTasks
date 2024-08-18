@@ -1,0 +1,49 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  app:
+    build: .
+    deploy:
+      replicas: 4
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=pass
+      - ME_CONFIG_MONGODB_URL=mongodb://db:27017  # Ensure this matches the Dockerfile
+      - ME_CONFIG_BASICAUTH_ENABLED=false
+      - ME_CONFIG_BASICAUTH=false
+      - ME_CONFIG_SITE_COOKIESECRET=cookiesecret
+      - ME_CONFIG_SITE_SESSIONSECRET=sessionsecret
+    depends_on:
+      - db
+
+  db:
+    image: mongo:latest
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: pass
+    ports:
+      - "27017:27017"
+    volumes:
+      - db_mongo:/data/db
+      - ./config.js:/opt/mongo-express/config.js
+
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    depends_on:
+      - app
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d/
+
+volumes:
+  db_mongo:
