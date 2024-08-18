@@ -49,7 +49,7 @@ docker ps
 ```
 
 - Look for a container named `nginx_jenkins-Task12` with port 6060 mapped to port 80.
-
+![container-nginx](Task12_Part4.png)
 ## Conclusion
 
 This task demonstrates how Jenkins can automate Docker tasks, specifically managing Docker images and containers. By completing this task, you have gained a basic understanding of creating Jenkins freestyle jobs that interact with Docker.
