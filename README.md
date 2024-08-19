@@ -31,37 +31,37 @@ This repository features a collection of tasks covering topics like Linux, Nginx
 
 ---
 
-#### Task 01: Basic File Operations
+### Task 01: Basic File Operations
 The goal of this task is to familiarize yourself with basic file operations in a Unix/Linux environment.
 
-#### Task 02: User and Group Management, Script Permissions, and Archiving
+### Task 02: User and Group Management, Script Permissions, and Archiving
 This task focuses on managing users, groups, file permissions, and archiving in a Unix/Linux environment.
 
-#### Task 03: Docker Installation, NGINX Setup, and Port Configuration
+### Task 03: Docker Installation, NGINX Setup, and Port Configuration
 This task involves installing Docker on a Linux system, setting up a simple website using NGINX, and configuring NGINX to run on a non-default port (82).
 
-#### Task 04: Docker and NGINX Setup with PHP-FPM and Caching
+### Task 04: Docker and NGINX Setup with PHP-FPM and Caching
 This task involves setting up a Docker container for the Spring Petclinic Node.js application, configuring an NGINX server with PHP 7.3 and PHP-FPM, and setting up caching and gzip compression for static content.
 
-#### Task 05: Docker Image Backing Up
+### Task 05: Docker Image Backing Up
 In this task, you'll learn how to back up a Docker image by committing a container, pushing it to Docker Hub, and saving it to a tar file. This process is essential for preserving and transferring Docker images.
 
-#### Task 06: Dockerfile Building Basics
+### Task 06: Dockerfile Building Basics
 In this task, we will create a Dockerfile to containerize the Spring Petclinic application, build the Docker image, and run the Docker container.
 
-#### Task 07: Docker Volumes using Nginx
+### Task 07: Docker Volumes using Nginx
 In this task, we set up an Nginx server to serve a CV application, use Docker bind mounts and volumes, and demonstrate how to manage and persist data across Docker containers.
 
-#### Task 08: Docker Networking Manual and Using Docker Compose
+### Task 08: Docker Networking Manual and Using Docker Compose
 In this task, we connect the Spring Petclinic application with a MySQL database using Docker. This task is divided into two parts: manual Docker networking and using Docker Compose. This demonstrates how to manage multi-container applications and network them together effectively.
 
-#### Task 09: Multilevel Dockerfile and Targeted Build with Multifile Docker Compose
+### Task 09: Multilevel Dockerfile and Targeted Build with Multifile Docker Compose
 In this task, you will create optimized Docker images using multistage Dockerfiles for different environments and manage these environments with multifile Docker Compose configurations. This approach allows you to streamline the building process and separate configurations for development and production environments.
 
-#### Task 10: Two Complete Applications Using Load Balancer and Docker Compose
+### Task 10: Two Complete Applications Using Load Balancer and Docker Compose
 This task demonstrates how to Dockerize two complete applications—**Spring Petclinic** and **mongo-express**—and manage them using Docker Compose. Additionally, we use **Nginx** as a load balancer to distribute traffic across multiple replicas of these applications.
 
-#### Task 11: ELK Stack and Nextcloud-Postgres with Docker Compose
+### Task 11: ELK Stack and Nextcloud-Postgres with Docker Compose
 This task involves setting up two distinct Docker Compose environments:
 
 1. **ELK Stack (Elasticsearch, Logstash, Kibana)**: A robust solution for managing and visualizing log data.
@@ -69,11 +69,11 @@ This task involves setting up two distinct Docker Compose environments:
 
 Each setup demonstrates how to orchestrate multi-container applications using Docker Compose.
 
-#### Task 12: Jenkins Freestyle Basics
+### Task 12: Jenkins Freestyle Basics
 This task demonstrates the basics of Jenkins by creating a simple freestyle job that interacts with Docker. The job involves removing an existing Docker image of Nginx and then recreating it with port mapping. This task is designed to showcase Jenkins' capability to automate Docker-related tasks.
 
-#### Task 13: Running a Docker-in-Docker (DinD) Jenkins Setup
+### Task 13: Running a Docker-in-Docker (DinD) Jenkins Setup
 In this task, we set up a Jenkins environment using Docker-in-Docker (DinD) to run Jenkins inside a Docker container. This setup allows Jenkins to interact with Docker directly, making it suitable for continuous integration and continuous deployment (CI/CD) pipelines. We also create a Jenkins agent using another Docker container, configure Docker Hub credentials, and implement a Jenkins pipeline with scheduling.
 
-#### Task 14: Advanced Jenkins Pipeline Configuration
+### Task 14: Advanced Jenkins Pipeline Configuration
 This task involves creating and configuring Jenkins pipelines with advanced features such as agent usage, parameterization, Slack notifications, webhook integration using ngrok, and setting up a Jenkins agent on Windows.
