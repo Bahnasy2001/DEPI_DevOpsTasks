@@ -1,0 +1,35 @@
+FROM jenkins/jenkins:latest
+
+USER root
+# Create the Docker group with GID 999 and Jenkins user with UID 129
+RUN groupadd -g 999 docker && \
+    useradd -ms /bin/bash -u 129 -g docker jenkins
+# Install Docker CLI
+RUN apt-get update -qq && \
+    apt-get install -qq \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg2 \
+    software-properties-common && \
+    curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - && \
+    add-apt-repository \
+    "deb [arch=amd64] https://download.docker.com/linux/debian \
+    $(lsb_release -cs) \
+    stable" && \
+    apt-get update -qq && \
+    apt-get install -qq docker-ce-cli
+
+#Adjust Permissions
+RUN chown -R jenkins: /var/jenkins_home
+RUN chmod -R 755 /var/jenkins_home
+
+# Optional: Add Docker group and add the Jenkins user to it
+RUN groupadd docker && \
+    usermod -aG docker jenkins
+
+# Switch back to Jenkins user
+USER jenkins
+
+# Default command to run Jenkins
+CMD ["jenkins.sh"]
