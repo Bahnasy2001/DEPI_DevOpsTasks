@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: petclinic-db-mysql-dev
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: petclinic
+      MYSQL_USER: petclinic
+      MYSQL_PASSWORD: petclinicpassword
+    ports:
+      - "3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  app:
+    build:
+      context: .
+      target: dev
+    # container_name: petclinic-app-dev
+    environment:
+      - MYSQL_URL=jdbc:mysql://db:3306/petclinic
+      - MYSQL_USER=petclinic
+      - MYSQL_PASS=petclinicpassword
+      - SPRING_PROFILES_ACTIVE=mysql
+    deploy:
+      replicas: 4
+      update_config:
+        parallelism: 2
+        delay: 10s
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+    # ports:
+    #   - "8080"
+    depends_on:
+      - db
+
+  nginx:
+    image: nginx:latest
+    ports: 
+      - "7000:80"
+    depends_on:
+      - app
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d/
+
+volumes:
+  db_data:
+
+
