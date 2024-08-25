@@ -1,6 +1,6 @@
 # DEPI_DevOpsTasks
 
-![Static Badge](https://img.shields.io/badge/build-Ubuntu-brightgreen?style=flat&logo=ubuntu&label=Linux&labelColor=Orange&color=red) ![Static Badge](https://img.shields.io/badge/Docker-27.0.3-skyblue?style=flat&logo=docker&label=Docker) ![Static Badge](https://img.shields.io/badge/jenkins-java%2017.0.12-brightred?style=flat&logo=jenkins&logoColor=darkred&label=jenkins&labelColor=grey&color=orange) ![Static Badge](https://img.shields.io/badge/ngrok-3.8.0-white?style=plastic&logo=ngrok&label=ngrok&labelColor=black&color=white) ![Static Badge](https://img.shields.io/badge/nginx-1.18.0-grey?style=flat&logo=nginx&label=nginx&labelColor=darkgreen&color=grey) 
+![Static Badge](https://img.shields.io/badge/build-Ubuntu-brightgreen?style=flat&logo=ubuntu&label=Linux&labelColor=Orange&color=red) ![Static Badge](https://img.shields.io/badge/Docker-27.0.3-skyblue?style=flat&logo=docker&label=Docker) ![Static Badge](https://img.shields.io/badge/jenkins-java%2017.0.12-brightred?style=flat&logo=jenkins&logoColor=darkred&label=jenkins&labelColor=grey&color=orange) ![Static Badge](https://img.shields.io/badge/ngrok-3.8.0-white?style=plastic&logo=ngrok&label=ngrok&labelColor=black&color=white) ![Static Badge](https://img.shields.io/badge/nginx-1.18.0-grey?style=flat&logo=nginx&label=nginx&labelColor=darkgreen&color=grey) ![Static Badge](https://img.shields.io/badge/Kubernetes-1.30-cyan?style=plastic&logo=kubernetes) ![Static Badge](https://img.shields.io/badge/Kubernetes-1.30-cyan?style=plastic&logo=kubernetes)
 
 This repository features a collection of tasks covering topics like Linux, Nginx, Docker, and Jenkins. Each task is organized into its own folder with a corresponding README file that provides comprehensive instructions.
 
@@ -28,6 +28,10 @@ This repository features a collection of tasks covering topics like Linux, Nginx
 12. [Task 12: Jenkins Freestyle Basics](Task12/README.md)
 13. [Task 13: Running a Docker-in-Docker (DinD) Jenkins Setup](Task13/README.md)
 14. [Task 14: Advanced Jenkins Pipeline Configuration](Task14/README.md)
+
+### Kubernetes
+
+15. [Task 15: Kubernetes Labs](Task15/README.md)
 
 ---
 
@@ -77,3 +81,9 @@ In this task, we set up a Jenkins environment using Docker-in-Docker (DinD) to r
 
 ### Task 14: Advanced Jenkins Pipeline Configuration
 This task involves creating and configuring Jenkins pipelines with advanced features such as agent usage, parameterization, Slack notifications, webhook integration using ngrok, and setting up a Jenkins agent on Windows.
+
+### Task 15: Kubernetes Labs
+
+Task 15 is a comprehensive set of Kubernetes labs designed to provide hands-on experience with various aspects of Kubernetes, from basic cluster setup to advanced deployment strategies. These labs are structured to gradually increase in complexity, covering topics such as Pods, ReplicaSets, Deployments, Namespaces, ConfigMaps, Secrets, RBAC, and Ingress Controllers. By completing these labs, you will gain a solid understanding of how to manage and scale applications in a Kubernetes environment.
+
+Each lab is organized in its own directory with a detailed README file that includes instructions and key concepts. The labs are ideal for anyone looking to deepen their knowledge of Kubernetes and its ecosystem.

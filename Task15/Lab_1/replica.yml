@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+# the kind of object we are creating is a ReplicaSet
+kind: ReplicaSet
+metadata:
+  # the name of the replicaset
+  name: nginx-replicaset
+
+# the specification of the pod we want to create
+spec:
+  # the number of replicas we want to have
+  replicas: 3
+  # the selector is used to identify the pods that are part of this replicaset
+  selector:
+    matchLabels:
+      # the replicas will identify the pods that are part of this replicaset if they have the labels app: nginx
+      app: nginx
+  # the pod template that we want to use
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      # the name of the container
+        - name: nginx
+          # the image we want to use
+          image: nginx:1.14.2
+          # the port we want to expose
+          ports:
+            - containerPort: 80

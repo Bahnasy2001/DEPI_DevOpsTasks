@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+# the kind of object we are creating is a Deployment
+kind: Deployment
+metadata:
+  # the name of the Deployment
+  name: nginx-deployment
+# the specification of the pod we want to create
+spec:
+  # the number of replicas we want to have
+  replicas: 3
+  # the selector is used to identify the pods that are part of this replicaset
+  selector:
+    # the replicas will identify the pods that are part of this replicaset if they have the labels app: nginx
+    matchLabels:
+      app: nginx
+  # the pod template that we want to use
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      # the name of the container
+      - name: nginx
+        # the image we want to use
+        image: nginx
+        # the port we want to expose
+        ports:
+        - containerPort: 80
