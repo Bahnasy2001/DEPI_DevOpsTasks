@@ -5,7 +5,7 @@
 This lab focuses on managing ConfigMaps, Secrets, multi-container Pods, Persistent Volumes, and environment variables within a Kubernetes cluster.
 
 ## Table of Contents
-1. [Checking Existing ConfigMaps](#checking-existing-configmaps)
+1. [Checking Existing ConfigMaps](#1-checking-existing-configmaps)
 2. [Creating a ConfigMap and Using It](#creating-a-configmap-and-using-it)
 3. [Managing Secrets](#managing-secrets)
 4. [Deploying Pods with Secrets](#deploying-pods-with-secrets)
