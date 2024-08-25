@@ -6,13 +6,13 @@ This lab focuses on managing ConfigMaps, Secrets, multi-container Pods, Persiste
 
 ## Table of Contents
 1. [Checking Existing ConfigMaps](#1-checking-existing-configmaps)
-2. [Creating a ConfigMap and Using It](#creating-a-configmap-and-using-it)
-3. [Managing Secrets](#managing-secrets)
-4. [Deploying Pods with Secrets](#deploying-pods-with-secrets)
-5. [Creating Multi-Container and InitContainers Pods](#creating-multi-container-and-initcontainers-pods)
-6. [Echoing Environment Variables](#echoing-environment-variables)
-7. [Managing Kubeconfig](#managing-kubeconfig)
-8. [Working with Persistent Volumes](#working-with-persistent-volumes)
+2. [Creating a ConfigMap and Using It](#2-creating-a-configmap-and-using-it)
+3. [Managing Secrets](#3-managing-secrets)
+4. [Deploying Pods with Secrets](#4-deploying-pods-with-secrets)
+5. [Creating Multi-Container and InitContainers Pods](#5-creating-multi-container-and-initcontainers-pods)
+6. [Echoing Environment Variables](#6-echoing-environment-variables)
+7. [Managing Kubeconfig](#7-managing-kubeconfig)
+8. [Working with Persistent Volumes](#8-working-with-persistent-volumes)
 
 ## 1. Checking Existing ConfigMaps
 

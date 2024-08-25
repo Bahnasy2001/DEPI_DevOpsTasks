@@ -5,10 +5,10 @@
 In this lab, you will explore Kubernetes Namespaces, manage Pods in specific namespaces, create a Deployment with resource limits in a custom namespace, and check the Nodes in your cluster.
 
 ## Table of Contents
-1. [Checking Existing Namespaces](#checking-existing-namespaces)
-2. [Listing Pods in the kube-system Namespace](#listing-pods-in-the-kube-system-namespace)
-3. [Creating a Deployment in a Custom Namespace](#creating-a-deployment-in-a-custom-namespace)
-4. [Checking the Number of Nodes](#checking-the-number-of-nodes)
+1. [Checking Existing Namespaces](#1-checking-existing-namespaces)
+2. [Listing Pods in the kube-system Namespace](#2-listing-pods-in-the-kube-system-namespace)
+3. [Creating a Deployment in a Custom Namespace](#3-creating-a-deployment-in-a-custom-namespace)
+4. [Checking the Number of Nodes](#4-checking-the-number-of-nodes)
 
 ## 1. Checking Existing Namespaces
 

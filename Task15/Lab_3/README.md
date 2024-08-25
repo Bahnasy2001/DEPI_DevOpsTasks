@@ -5,12 +5,12 @@
 In this lab, you will explore DaemonSets, deploy Pods and Services using YAML files, interact with static Pods, and manage networking within your Kubernetes cluster.
 
 ## Table of Contents
-1. [Checking DaemonSets in the Cluster](#checking-daemonsets-in-the-cluster)
-2. [Inspecting the kube-proxy DaemonSet](#inspecting-the-kube-proxy-daemonset)
-3. [Deploying FluentD Logging DaemonSet](#deploying-fluentd-logging-daemonset)
-4. [Deploying and Testing Backend Services](#deploying-and-testing-backend-services)
-5. [Deploying Web Application and Exposing it](#deploying-web-application-and-exposing-it)
-6. [Checking Static Pods in the Cluster](#checking-static-pods-in-the-cluster)
+1. [Checking DaemonSets in the Cluster](#1-checking-daemonsets-in-the-cluster)
+2. [Inspecting the kube-proxy DaemonSet](#2-inspecting-the-kube-proxy-daemonset)
+3. [Deploying FluentD Logging DaemonSet](#3-deploying-fluentd-logging-daemonset)
+4. [Deploying and Testing Backend Services](#4-deploying-and-testing-backend-services)
+5. [Deploying Web Application and Exposing it](#5-deploying-web-application-and-exposing-it)
+6. [Checking Static Pods in the Cluster](#6-checking-static-pods-in-the-cluster)
 
 ## 1. Checking DaemonSets in the Cluster
 

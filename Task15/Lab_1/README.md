@@ -6,13 +6,13 @@
 This lab guides you through the process of setting up a Kubernetes cluster using Minikube, creating Pods, ReplicaSets, and Deployments, and managing them with kubectl commands and YAML configuration files.
 
 ## Table of Contents
-1. [Setup Kubernetes Cluster](#setup-kubernetes-cluster)
-2. [Creating a Pod](#creating-a-pod)
+1. [Setup Kubernetes Cluster](#1-setup-kubernetes-cluster)
+2. [Creating a Pod](#2-creating-a-pod)
    - Using kubectl command
    - Using YAML configuration
-3. [Creating a ReplicaSet](#creating-a-replicaset)
+3. [Creating a ReplicaSet](#3-creating-a-replicaset)
    - Scaling the ReplicaSet
-4. [Creating a Deployment](#creating-a-deployment)
+4. [Creating a Deployment](#4-creating-a-deployment)
    - Rolling Update and Rollback
    - Creating a Deployment with Custom Labels
 
