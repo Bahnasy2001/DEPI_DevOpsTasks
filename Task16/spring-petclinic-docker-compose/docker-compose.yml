@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    # container_name: petclinic-app-target
+    # ports:
+    #   - "5000:8080"
+    depends_on:
+      - db
+
+
+
+

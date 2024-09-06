@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql-configmap
+  namespace: spring-petclinic-dev
+data:
+  MYSQL_URL: jdbc:mysql://mysql-service:3306/petclinic
+  MYSQL_USER: petclinic
+  MYSQL_ROOT_PASSWORD: root
+  MYSQL_PASSWORD: petclinic

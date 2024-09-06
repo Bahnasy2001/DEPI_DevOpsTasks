@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-deployment
+  namespace: spring-petclinic-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql-deployment
+  template:
+    metadata:
+      labels:
+        app: mysql-deployment
+    spec:
+      containers:
+      - name: mysql-deployment
+        image: mysql:latest
+        ports:
+        - containerPort: 3306
+        env:
+        - name: MYSQL_USER
+          # value: petclinic
+          valueFrom:
+            configMapKeyRef:
+              name: mysql-configmap
+              key: MYSQL_USER
+        - name: MYSQL_PASSWORD
+          # value: petclinic
+          valueFrom:
+            configMapKeyRef:
+              name: mysql-configmap
+              key: MYSQL_PASSWORD
+        - name: MYSQL_ROOT_PASSWORD
+          # value: root
+          valueFrom:
+            configMapKeyRef:
+              name: mysql-configmap
+              key: MYSQL_ROOT_PASSWORD
+        - name: MYSQL_DATABASE
+          value: petclinic
+        volumeMounts:
+        - name: spring-mysql-volume
+          mountPath: /var/lib/mysql
+      volumes:
+        - name: spring-mysql-volume
+          persistentVolumeClaim:
+            claimName: spring-mysql-pvc

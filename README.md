@@ -32,7 +32,7 @@ This repository features a collection of tasks covering topics like Linux, Nginx
 ### Kubernetes
 
 15. [Task 15: Kubernetes Labs](Task15/README.md)
-
+16. [Task16: Kubernetes Setup for Spring Petclinic Application with MySQL Database](Task_16/README.md)
 ---
 
 ### Task 01: Basic File Operations
@@ -85,5 +85,11 @@ This task involves creating and configuring Jenkins pipelines with advanced feat
 ### Task 15: Kubernetes Labs
 
 Task 15 is a comprehensive set of Kubernetes labs designed to provide hands-on experience with various aspects of Kubernetes, from basic cluster setup to advanced deployment strategies. These labs are structured to gradually increase in complexity, covering topics such as Pods, ReplicaSets, Deployments, Namespaces, ConfigMaps, Secrets, RBAC, and Ingress Controllers. By completing these labs, you will gain a solid understanding of how to manage and scale applications in a Kubernetes environment.
+
+### Task 16: Kubernetes Setup for Spring Petclinic Application with MySQL Database
+
+In this task, you will deploy the Spring Petclinic application with a MySQL database in a Kubernetes cluster. The setup demonstrates the use of Kubernetes resources like ConfigMaps, Secrets, Persistent Volumes, Deployments, and Services to manage application data, secrets, and scalability.
+
+
 
 Each lab is organized in its own directory with a detailed README file that includes instructions and key concepts. The labs are ideal for anyone looking to deepen their knowledge of Kubernetes and its ecosystem.

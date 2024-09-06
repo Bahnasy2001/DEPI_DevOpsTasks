@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: spring-mysql-pvc
+  namespace: spring-petclinic-dev
+spec:
+  volumeName: mysql-pv
+  storageClassName: mysql-class
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 512Mi
