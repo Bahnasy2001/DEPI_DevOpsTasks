@@ -32,7 +32,8 @@ This repository features a collection of tasks covering topics like Linux, Nginx
 ### Kubernetes
 
 15. [Task 15: Kubernetes Labs](Task15/README.md)
-16. [Task16: Kubernetes Setup for Spring Petclinic Application with MySQL Database](Task_16/README.md)
+16. [Task 16: Kubernetes Setup for Spring Petclinic Application with MySQL Database](Task16/README.md)
+17. [Task 17: MongoDB and Mongo Express Deployment on Kubernetes](Task17/README.md)
 ---
 
 ### Task 01: Basic File Operations
@@ -91,5 +92,8 @@ Task 15 is a comprehensive set of Kubernetes labs designed to provide hands-on e
 In this task, you will deploy the Spring Petclinic application with a MySQL database in a Kubernetes cluster. The setup demonstrates the use of Kubernetes resources like ConfigMaps, Secrets, Persistent Volumes, Deployments, and Services to manage application data, secrets, and scalability.
 
 
+### Task 17: MongoDB and Mongo Express Deployment on Kubernetes
+
+In this task, MongoDB and Mongo Express are deployed on a Kubernetes cluster using Kubernetes ConfigMaps, Secrets, Persistent Volumes, Persistent Volume Claims, Deployments, and Services. MongoDB is managed through a ClusterIP service, while Mongo Express is exposed via a LoadBalancer service for easy access. This setup allows database management using the Mongo Express web interface.
 
 Each lab is organized in its own directory with a detailed README file that includes instructions and key concepts. The labs are ideal for anyone looking to deepen their knowledge of Kubernetes and its ecosystem.
