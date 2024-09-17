@@ -29,7 +29,7 @@ In this setup, Auto Scaling Groups (ASGs) are used for the **Web** and **Applica
    - Security group that allows inbound traffic from the **Application Tier**.
    - MySQL RDS instance deployed in the private subnets.
 
-![aws_3-tier-architecture](../aws.jpeg)
+![aws_3-tier-architecture](aws.jpeg)
 ---
 
 ## Prerequisites
