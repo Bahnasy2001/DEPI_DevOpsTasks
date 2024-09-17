@@ -34,6 +34,9 @@ This repository features a collection of tasks covering topics like Linux, Nginx
 15. [Task 15: Kubernetes Labs](Task15/README.md)
 16. [Task 16: Kubernetes Setup for Spring Petclinic Application with MySQL Database](Task16/README.md)
 17. [Task 17: MongoDB and Mongo Express Deployment on Kubernetes](Task17/README.md)
+
+### Terraform
+18. [Task18: Deploying a Highly Available 3-Tier Architecture on AWS with Terraform](Task18/README.md)
 ---
 
 ### Task 01: Basic File Operations
@@ -97,3 +100,9 @@ In this task, you will deploy the Spring Petclinic application with a MySQL data
 In this task, MongoDB and Mongo Express are deployed on a Kubernetes cluster using Kubernetes ConfigMaps, Secrets, Persistent Volumes, Persistent Volume Claims, Deployments, and Services. MongoDB is managed through a ClusterIP service, while Mongo Express is exposed via a LoadBalancer service for easy access. This setup allows database management using the Mongo Express web interface.
 
 Each lab is organized in its own directory with a detailed README file that includes instructions and key concepts. The labs are ideal for anyone looking to deepen their knowledge of Kubernetes and its ecosystem.
+
+### Task 18: Deploying a Highly Available 3-Tier Architecture on AWS with Terraform
+
+In this task, This Terraform project deploys a scalable 3-tier architecture on AWS with public subnets for web servers, private subnets for application servers, and private subnets for an RDS MySQL database. It uses an S3 bucket for state storage and DynamoDB for state locking, ensuring high availability and redundancy.
+
+---

@@ -1,0 +1,17 @@
+region="us-west-2"
+vpc_cidr = "10.0.0.0/16"
+public_subnet_cidr_1 = "10.0.1.0/24"
+public_subnet_cidr_2 = "10.0.2.0/24"
+private_subnet_cidr_1 = "10.0.3.0/24"
+private_subnet_cidr_2 = "10.0.4.0/24"
+instance_type = "t2.micro"
+web_ami = "ami-0c55b159cbfafe1f0"
+app_ami = "ami-0c55b159cbfafe1f0"
+desired_capacity = 2
+max_size = 2
+min_size = 1
+db_instance_class = "db.t2.micro"
+db_name = "mydb"
+db_username = "admin"
+db_password = "password"
+db_allocated_storage = 20
