@@ -36,7 +36,8 @@ This repository features a collection of tasks covering topics like Linux, Nginx
 17. [Task 17: MongoDB and Mongo Express Deployment on Kubernetes](Task17/README.md)
 
 ### Terraform
-18. [Task18: Deploying a Highly Available 3-Tier Architecture on AWS with Terraform](Task18/README.md)
+18. [Task 18: Deploying a Highly Available 3-Tier Architecture on AWS with Terraform](Task18/README.md)
+19. [Task 19: Azure 3-Tier Architecture with Terraform](Task19/README.md)
 ---
 
 ### Task 01: Basic File Operations
@@ -104,5 +105,9 @@ Each lab is organized in its own directory with a detailed README file that incl
 ### Task 18: Deploying a Highly Available 3-Tier Architecture on AWS with Terraform
 
 In this task, This Terraform project deploys a scalable 3-tier architecture on AWS with public subnets for web servers, private subnets for application servers, and private subnets for an RDS MySQL database. It uses an S3 bucket for state storage and DynamoDB for state locking, ensuring high availability and redundancy.
+
+### Task 19: Azure 3-Tier Architecture with Terraform
+
+This project provisions a highly available 3-tier architecture in Azure using Terraform. It includes separate web, application, and database tiers, each isolated across multiple subnets for security and performance. The deployment uses modules for scalability and follows best practices for resource management, automation, and availability. Key features include VMs, load balancers, and network security.
 
 ---
