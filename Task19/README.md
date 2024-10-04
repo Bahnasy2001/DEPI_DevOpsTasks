@@ -16,33 +16,20 @@ The infrastructure is designed with high availability by utilizing Azure's **Ava
 ![Architecture Diagram](./azure-3-tier-architecture/Diagram.webp)
 
 ```mermaid
-graph TD
-    A[User] -->|HTTP/HTTPS| B[Public Load Balancer]
-    B -->|Traffic Distribution| C[Web Tier (VMs)]
-    C --> D[Internal Load Balancer]
-    D --> E[Application Tier (VMs)]
-    E --> F[Database Tier (VMs)]
+graph TD;
+  A[User] -->|HTTP| B[Load Balancer];
+  B --> C[Web Tier (VMs)];
+  C --> D[Application Tier (VMs)];
+  D --> E[Database Tier];
+  E -->|Data| F[(Database)];
 
-    subgraph Zone A
-        C1[Web VM1]
-        E1[App VM1]
-        F1[DB VM1]
-    end
-    
-    subgraph Zone B
-        C2[Web VM2]
-        E2[App VM2]
-        F2[DB VM2]
-    end
-    
-    B -.->|HTTP/HTTPS| C1
-    B -.->|HTTP/HTTPS| C2
-    D -.->|Traffic Distribution| E1
-    D -.->|Traffic Distribution| E2
-    E1 -.->|DB Queries| F1
-    E2 -.->|DB Queries| F2
+  subgraph Availability Zone A;
+    C1[Web VM 1] --> D1[App VM 1] --> E1[DB VM 1];
+  end
 
-    F1 -.->|Internal Only| F2
+  subgraph Availability Zone B;
+    C2[Web VM 2] --> D2[App VM 2] --> E2[DB VM 2];
+  end
 ```
 
 ## Infrastructure Components
