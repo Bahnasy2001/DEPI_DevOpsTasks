@@ -18,8 +18,8 @@ The infrastructure is designed with high availability by utilizing Azure's **Ava
 ```mermaid
 graph TD;
   A[User] -->|HTTP| B[Load Balancer];
-  B --> C[Web Tier (VMs)];
-  C --> D[Application Tier (VMs)];
+  B --> C[Web Tier];
+  C --> D[Application Tier];
   D --> E[Database Tier];
   E -->|Data| F[(Database)];
 
