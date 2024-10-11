@@ -1,0 +1,143 @@
+---
+# tasks file for Install_Sonatype_Nexus_3
+
+- name: Update packages (RHEL/CentOS)
+  yum:
+    name: "*"
+    state: latest
+  when: ansible_os_family == "RedHat"
+
+- name: Install wget (RHEL/CentOS)
+  yum:
+    name: wget
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Update packages (Debian)
+  apt:
+    update_cache: yes
+    name: "*"
+    state: latest
+  when: ansible_os_family == "Debian"
+
+- name: Install wget (Debian)
+  apt:
+    name: wget
+    state: present
+  when: ansible_os_family == "Debian"
+
+# Step 1: Install Java (Nexus requires Java 8+)
+- name: Install Java
+  apt:
+    name: openjdk-11-jdk
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Install Java (for RHEL/CentOS)
+  yum:
+    name: java-11-openjdk
+    state: present
+  when: ansible_os_family == "RedHat"
+
+# Step 2: Create a Nexus user
+- name: Create nexus user
+  user:
+    name: nexus
+    shell: /bin/bash
+    system: yes
+    create_home: yes
+
+# Step 3: Download Nexus
+
+- name: Install python-httplib2
+  apt:
+    name: python3-httplib2
+    state: present
+
+- name: Download Nexus latest tarball using wget
+  command: wget -O /opt/nexus.tar.gz https://download.sonatype.com/nexus/3/latest-unix.tar.gz
+
+# - name: Download Nexus latest tarball
+#   get_url:
+#     url: "https://download.sonatype.com/nexus/3/latest-unix.tar.gz"
+#     dest: "/opt/nexus.tar.gz"
+#     mode: '0755'
+#     validate_certs: no
+
+
+# Step 4: Extract Nexus
+- name: Extract Nexus tarball
+  unarchive:
+    src: /opt/nexus.tar.gz
+    dest: /opt
+    remote_src: yes
+
+- name: List contents of /opt directory
+  command: ls -l /opt
+  register: ls_output
+
+- debug:
+    var: ls_output.stdout
+
+- name: Find the Nexus directory
+  command: find /opt -maxdepth 1 -type d -name 'nexus-*'
+  register: nexus_dir
+
+- debug:
+    var: nexus_dir.stdout
+
+- name: Rename Nexus folder
+  command: mv {{ nexus_dir.stdout }} /opt/nexus
+
+
+
+# Step 5: Give ownership of the nexus files to the nexus user
+- name: Change ownership of Nexus directories
+  file:
+    path: /opt/nexus
+    owner: nexus
+    group: nexus
+    recurse: yes
+
+- name: Change ownership of Nexus data directory
+  file:
+    path: /opt/sonatype-work
+    owner: nexus
+    group: nexus
+    recurse: yes
+
+# Step 6: Configure Nexus to run as a service
+- name: Configure Nexus service using template
+  template:
+    src: nexus.service.j2
+    dest: /etc/systemd/system/nexus.service
+    mode: '0644'
+
+# Step 7: Enable Nexus to run as the nexus user
+- name: Allow nexus user to run Nexus
+  lineinfile:
+    path: /opt/nexus/bin/nexus.rc
+    line: 'run_as_user="nexus"'
+    create: yes
+
+# Step 8: Start and enable Nexus service
+- name: Start and enable Nexus service
+  systemd:
+    name: nexus
+    state: started
+    enabled: yes
+
+# Step 9: Open Firewall Port 8081 (Optional if a firewall is in use)
+- name: Open port 8081 (for Debian-based)
+  ufw:
+    rule: allow
+    port: 8081
+    proto: tcp
+  when: ansible_os_family == "Debian"
+
+- name: Open port 8081 (for RHEL/CentOS)
+  firewalld:
+    port: 8081/tcp
+    permanent: yes
+    state: enabled
+  when: ansible_os_family == "RedHat"

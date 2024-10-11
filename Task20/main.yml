@@ -1,0 +1,7 @@
+---
+- name: Install Nexus on target servers
+  hosts: nexus_servers
+  remote_user: ansibleuser
+  become: true
+  roles:
+    - Install_Sonatype_Nexus_3

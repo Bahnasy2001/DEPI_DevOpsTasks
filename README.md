@@ -1,6 +1,7 @@
 # DEPI_DevOpsTasks
 
-![Static Badge](https://img.shields.io/badge/build-Ubuntu-brightgreen?style=flat&logo=ubuntu&label=Linux&labelColor=Orange&color=red) ![Static Badge](https://img.shields.io/badge/Docker-27.0.3-skyblue?style=flat&logo=docker&label=Docker) ![Static Badge](https://img.shields.io/badge/jenkins-java%2017.0.12-brightred?style=flat&logo=jenkins&logoColor=darkred&label=jenkins&labelColor=grey&color=orange) ![Static Badge](https://img.shields.io/badge/ngrok-3.8.0-white?style=plastic&logo=ngrok&label=ngrok&labelColor=black&color=white) ![Static Badge](https://img.shields.io/badge/nginx-1.18.0-grey?style=flat&logo=nginx&label=nginx&labelColor=darkgreen&color=grey) ![Static Badge](https://img.shields.io/badge/Kubernetes-1.30-cyan?style=plastic&logo=kubernetes) ![Static Badge](https://img.shields.io/badge/terraform-v1.9.5-orange?style=plastic&logo=terraform&logoColor=violet&labelColor=white) ![Static Badge](https://img.shields.io/badge/aws-v2.17.52-darkblue?style=plastic&logo=amazonwebservices&logoColor=orange&label=aws&labelColor=brightblue&color=darkblue) ![Static Badge](https://img.shields.io/badge/azure%20-%20v2.64.0-blue?logoColor=grey)
+![Static Badge](https://img.shields.io/badge/build-Ubuntu-brightgreen?style=flat&logo=ubuntu&label=Linux&labelColor=Orange&color=red) ![Static Badge](https://img.shields.io/badge/Docker-27.0.3-skyblue?style=flat&logo=docker&label=Docker) ![Static Badge](https://img.shields.io/badge/jenkins-java%2017.0.12-brightred?style=flat&logo=jenkins&logoColor=darkred&label=jenkins&labelColor=grey&color=orange) ![Static Badge](https://img.shields.io/badge/ngrok-3.8.0-white?style=plastic&logo=ngrok&label=ngrok&labelColor=black&color=white) ![Static Badge](https://img.shields.io/badge/nginx-1.18.0-grey?style=flat&logo=nginx&label=nginx&labelColor=darkgreen&color=grey) ![Static Badge](https://img.shields.io/badge/Kubernetes-1.30-cyan?style=plastic&logo=kubernetes) ![Static Badge](https://img.shields.io/badge/terraform-v1.9.5-orange?style=plastic&logo=terraform&logoColor=violet&labelColor=white) ![Static Badge](https://img.shields.io/badge/aws-v2.17.52-darkblue?style=plastic&logo=amazonwebservices&logoColor=orange&label=aws&labelColor=brightblue&color=darkblue) ![Static Badge](https://img.shields.io/badge/azure%20-%20v2.64.0-blue?logoColor=grey) ![Static Badge](https://img.shields.io/badge/ansible-v2.13.13-grey?logo=ansible&logoColor=black&label=ansible&labelColor=white)
+
 
 This repository features a collection of tasks covering topics like Linux, Nginx, Docker, Jenkins , Terraform And Ansible. Each task is organized into its own folder with a corresponding README file that provides comprehensive instructions.
 
@@ -38,6 +39,9 @@ This repository features a collection of tasks covering topics like Linux, Nginx
 ### Terraform
 18. [Task 18: Deploying a Highly Available 3-Tier Architecture on AWS with Terraform](Task18/README.md)
 19. [Task 19: Azure 3-Tier Architecture with Terraform](Task19/README.md)
+
+### Ansible
+20. [Task 20: Install Sonatype Nexus 3 with Ansible](Task20/README.md)
 ---
 
 ### Task 01: Basic File Operations
@@ -110,4 +114,6 @@ In this task, This Terraform project deploys a scalable 3-tier architecture on A
 
 This project provisions a highly available 3-tier architecture in Azure using Terraform. It includes separate web, application, and database tiers, each isolated across multiple subnets for security and performance. The deployment uses modules for scalability and follows best practices for resource management, automation, and availability. Key features include VMs, load balancers, and network security.
 
+### Task 20: Install Sonatype Nexus 3 with Ansible
+This Ansible role automates the installation of Sonatype Nexus 3 on a Linux server. It updates system packages, installs necessary dependencies (like Java and wget), downloads and extracts Nexus, creates a service for Nexus, and ensures it starts on boot. After the installation, the role verifies that Nexus is running properly and accessible via port 8081.
 ---

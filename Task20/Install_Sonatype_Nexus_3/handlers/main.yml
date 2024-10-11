@@ -1,0 +1,6 @@
+---
+# handlers file for Install_Sonatype_Nexus_3
+- name: Restart Nexus
+  systemd:
+    name: nexus
+    state: restarted
