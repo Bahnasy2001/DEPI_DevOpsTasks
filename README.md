@@ -115,5 +115,7 @@ In this task, This Terraform project deploys a scalable 3-tier architecture on A
 This project provisions a highly available 3-tier architecture in Azure using Terraform. It includes separate web, application, and database tiers, each isolated across multiple subnets for security and performance. The deployment uses modules for scalability and follows best practices for resource management, automation, and availability. Key features include VMs, load balancers, and network security.
 
 ### Task 20: Install Sonatype Nexus 3 with Ansible
+
 This Ansible role automates the installation of Sonatype Nexus 3 on a Linux server. It updates system packages, installs necessary dependencies (like Java and wget), downloads and extracts Nexus, creates a service for Nexus, and ensures it starts on boot. After the installation, the role verifies that Nexus is running properly and accessible via port 8081.
+
 ---
